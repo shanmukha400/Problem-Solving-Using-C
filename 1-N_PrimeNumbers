@@ -1,0 +1,28 @@
+#include<stdio.h>
+#include <stdbool.h> 
+bool isPrime(int num) { 
+if (num <= 1) { 
+return false; // 0 and 1 are not prime numbers 
+} 
+for (int i = 2; i <= num / 2; i++) { 
+if (num % i == 0) { 
+return false; // If divisible, it is not a prime number 
+} 
+} 
+return true; // If no divisors, it is a prime number 
+} 
+int main() { 
+int n; 
+// Input the upper limit 
+printf("Enter the upper limit: "); 
+scanf("%d", &n); 
+// Print prime numbers from 1 to n 
+printf("Prime numbers from 1 to %d are:\n", n); 
+for (int i = 1; i <= n; i++) { 
+if (isPrime(i)) { 
+printf("%d ", i); 
+} 
+} 
+printf("\n"); 
+return 0; 
+}
