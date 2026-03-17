@@ -1,0 +1,21 @@
+c 
+#include <stdio.h> 
+int main() { 
+int i = 0; 
+// while loop example 
+printf("Using while loop:\n"); 
+while (i < 5) { 
+printf("%d ", i); 
+i++; 
+} 
+printf("\n"); 
+// do-while loop example 
+printf("Using do-while loop:\n"); 
+i = 0; 
+do { 
+printf("%d ", i); 
+i++; 
+} while (i < 5); 
+printf("\n"); 
+return 0; 
+} 
