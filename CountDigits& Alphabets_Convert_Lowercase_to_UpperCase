@@ -1,0 +1,39 @@
+#include <stdio.h> 
+#include <ctype.h> 
+int main() { 
+char str[100]; 
+int i; 
+int lowercase = 0, uppercase = 0, consonants = 0, vowels = 0, digits 
+= 0; 
+// Input the string 
+printf("Enter a string: "); 
+scanf("%s", str); 
+// Traverse the string 
+for (i = 0; str[i] != '\0'; i++) { 
+char ch = str[i]; 
+if (islower(ch)) { 
+lowercase++; 
+ch = toupper(ch); 
+} 
+if (isupper(ch)) { 
+uppercase++; 
+} 
+if (isdigit(ch)) { 
+digits++; 
+} 
+if (ch == 'A' || ch == 'E' || ch == 'I' || ch == 'O' || ch == 'U') { 
+vowels++; 
+} else if (isalpha(ch)) { 
+consonants++; 
+} 
+str[i] = ch; 
+} 
+// Print the results 
+printf("Lowercase letters: %d\n", lowercase); 
+printf("Uppercase letters: %d\n", uppercase); 
+printf("Consonants: %d\n", consonants); 
+printf("Vowels: %d\n", vowels); 
+printf("Digits: %d\n", digits); 
+printf("Converted string: %s\n", str); 
+return 0; 
+}
