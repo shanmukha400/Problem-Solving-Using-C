@@ -1,0 +1,29 @@
+#include <stdio.h> 
+#include <string.h> 
+// Function to reverse a string 
+void reverseString(char str[]) { 
+int n = strlen(str); 
+for (int i = 0; i < n / 2; i++) { 
+char temp = str[i]; 
+str[i] = str[n - i - 1]; 
+str[n - i - 1] = temp; 
+} 
+} 
+int main() { 
+char str1[100], str2[100], str3[100]; 
+// Input the strings 
+printf("Enter the first string: "); 
+scanf("%s", str1); 
+printf("Enter the second string: "); 
+scanf("%s", str2); 
+// Calculate and print the length of the first string 
+printf("Length of the first string: %zu\n", strlen(str1)); 
+// Concatenate the two strings 
+strcpy(str3, str1); // Copy str1 to str3 
+strcat(str3, str2); // Concatenate str2 to str3 
+printf("Concatenated string: %s\n", str3); 
+// Reverse the first string and print it 
+reverseString(str1); 
+printf("Reversed first string: %s\n", str1); 
+return 0; 
+} 
