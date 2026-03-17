@@ -1,0 +1,14 @@
+#include <stdio.h> 
+#define PI 3.14159265358979323846 
+int main() { 
+float radius, side, area_circle, area_square; 
+printf("Enter the radius of the circle: "); 
+scanf("%f", &radius); 
+printf("Enter the side length of the square: "); 
+scanf("%f", &side); 
+area_circle = PI * radius * radius; 
+area_square = side * side; 
+printf("Area of the circle: %.2f\n", area_circle); 
+printf("Area of the square: %.2f\n", area_square); 
+return 0; 
+}
