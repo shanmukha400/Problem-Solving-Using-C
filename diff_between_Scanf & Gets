@@ -1,0 +1,12 @@
+#include <stdio.h> 
+int main() { 
+char str[100]; 
+// Using gets() 
+printf("Enter a line of text: "); 
+gets(str); 
+printf("You entered: %s\n", str);
+ // Using scanf() 
+    printf("Enter a string: "); 
+    scanf("%s", str); 
+    printf("You entered: %s\n", str); 
+    return 0;} 
