@@ -1,0 +1,16 @@
+)#include <stdio.h> 
+int main() { 
+int intVar = 10; 
+float floatVar = 20.5; 
+double doubleVar = 30.1234; 
+char charVar = 'A'; 
+printf("intVar: Address = %p, Value = %d, Size = %zu bytes\n", 
+(void*)&intVar, intVar, sizeof(intVar)); 
+printf("floatVar: Address = %p, Value = %f, Size = %zu bytes\n", 
+(void*)&floatVar, floatVar, sizeof(floatVar)); 
+printf("doubleVar: Address = %p, Value = %lf, Size = %zu bytes\n", 
+(void*)&doubleVar, doubleVar, sizeof(doubleVar)); 
+printf("charVar: Address = %p, Value = %c, Size = %zu bytes\n", 
+(void*)&charVar, charVar, sizeof(charVar)); 
+return 0; 
+}
